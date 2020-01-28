@@ -101,7 +101,7 @@ div[class^='xs'] {
 	width: 30vw;
 	position: absolute;
 	bottom: -15px;
-	left: 0;
+	left: -10vw;
 }
 
 .tree {
@@ -113,9 +113,10 @@ div[class^='xs'] {
 
 .tree--big {
 	width: 60vw;
+	max-height: 80vh;
 	position: absolute;
 	bottom: 0px;
-	right: 0;
+	right: -20vw;
 	z-index: 0;
 }
 
