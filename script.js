@@ -7,6 +7,9 @@ let video__button = document.querySelector('.video__button');
 
 let features = document.querySelectorAll('.feature');
 
+let heroButton = document.querySelector('.hero__button');
+let heroButtonFixed = document.querySelector('.hero__button--fixed');
+
 let played = false;
 
 window.addEventListener('scroll', function() {
@@ -21,6 +24,21 @@ window.addEventListener('scroll', function() {
 			feature.classList.add('fade');
 		}
 	})
+
+	if(heroButton.offsetTop <= window.pageYOffset) {
+		console.log('button at top');
+		if(!heroButton.classList.contains('fade-out')) {
+			heroButton.classList.add('fade-out');
+		}
+	} else {
+		heroButton.classList.remove('fade-out');
+	}
+
+	if(window.pageYOffset >= window.innerHeight	- (window.innerHeight * .10)) {
+		heroButtonFixed.classList.add('fade-in');
+	} else {
+		heroButtonFixed.classList.remove('fade-in');
+	}
 })
 
 video.addEventListener('click', function() {
